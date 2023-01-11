@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+    body{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+    }
+      .wrapper1 {
+        width: 310px;
+        padding: 20px;
+        background: rgba(187, 176, 176, 0.516);
+        margin: 20px auto;
+        min-height: 100px;
+        border: 1px solid #8d8484;
+      }
+  </style>
+</head>
+<body>
+    
+      <form action="/updatesearch">
+   <center><h3>UPDATE STUDENT</h3>
+   
+    <div class="wrapper1">
+ 
+    <label for="phn"><b>Registration Number</b></label><br><br>
+    <input type="phone"  placeholder="" name="phone" id="phone" required><br><br>
+
+    <button type="submit" class="registerbtn">NEXT</button><br><br>
+    <a href="./" style="color:black">BACK</a> <br></center>
+
+    <br>
+   
+ {{#if umesg}}
+     <h3>Data updated!</h3>
+     {{/if}}
+
+     
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+
+<!--Search form design end-->
+
+{{#if mesg1}}
+       <div class="container">
+       <form action="/updatestudent"  >
+   
+   
+    <hr>
+{{#data}}
+<center>
+    <label for="name"><b>Name:</b></label>
+    <input type="text" placeholder="Enter Name of the Student" name="name" value="{{username}}" id="name" required>
+
+    <label for="phn"><b>Registration Number:</b></label>
+    <input type="phone" placeholder="Enter Registration Number" name="phone" value="{{regno}}" id="phone" required readonly>
+
+    <label for="eml-id"><b>Email:</b></label>
+    <input type="text" placeholder="Enter the Email ID" name="email" value="{{email}}" id="email" required>
+
+    <label for="gender_g"><b>Gender:</b></label>
+    <input type="text" placeholder="Gender" name="gender" value="{{gender}}" id="" required><br><br>
+
+    <button type="submit" class="registerbtn">UPDATE</button><br><br>
+{{/data}}
+  
+    <a href="./" style="color:black">BACK</a> <br></center>
+     
+    
+</form>
+</div>
+     
+      {{/if}}      
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      
+    }
+  .wrapper {
+        width: 310px;
+        padding: 20px;
+        background: rgba(187, 176, 176, 0.516);
+        margin: 20px auto;
+        min-height: 200px;
+        border: 1px solid #8d8484;
+      }
+
+  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+       <form action="/addstudent"  >
+   <center><h3>ADD NEW STUDENT</h3></center>
+   
+    <div class="wrapper">
+
+    <label for="name"><b>Name:</b></label>
+    <input type="text" placeholder="" name="name" id="name" required><br><br>
+
+    <label for="phn"><b>Reg. Number:</b></label>
+    <input type="phone" placeholder="" name="phone" id="phone" required><br><br>
+
+    <label for="eml-id"><b>Email:</b></label>
+    <input type="text" placeholder="" name="email" id="email"><br><br>
+
+    <label for="gender_g"><b>Gender:</b></label>
+    <input type="text" placeholder="" name="gender" id=""><br><br>
+   
+    <center><button type="submit" class="registerbtn">Add Student</button><br><br>
+
+  
+    <a href="./" style="color:black">BACK</a> <br></center>
+     
+     {{#if mesg}}
+     <h3>Data Inserted</h3>
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h3>Registration Number is present!</h3>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>
